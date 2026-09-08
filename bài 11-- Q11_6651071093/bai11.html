@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Tạo form và các điều khiển trên form</title>
+</head>
+<body>
+
+    <h2 align="center"><font color="#993300">Đăng nhập</font></h2>
+
+    <form name="frmDangNhap">
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <td>Mã người dùng:</td>
+                <td><input type="text" name="txtUser" size="20"></td>
+            </tr>
+            <tr>
+                <td>Mật khẩu:</td>
+                <td><input type="password" name="txtPass" size="20"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" bgcolor="#CCFFFF">
+                    <input type="button" value="Đồng ý" onclick="dongY()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" bgcolor="#CCFFFF">
+                    <label id="lblKetQua"></label>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function dongY() {
+            var ten = document.frmDangNhap.txtUser.value;
+            document.getElementById("lblKetQua").innerHTML = ten;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Tao form va cac dieu khien</title>
+    <style>
+        body { font-family: Tahoma; font-size: 13px; }
+        table { border-collapse: collapse; width: 500px; margin: auto; background-color: #E6FFE6; }
+        td, th { border: 1px solid #339933; padding: 6px; }
+        h2 { text-align: center; color: #006600; }
+        #thongbao { text-align: center; color: #CC3300; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h2>Phieu dang ky tham gia chuong trinh khuyen mai</h2>
+
+    <form name="frmDangKy">
+    <table>
+        <tr>
+            <td width="150">Ho va ten</td>
+            <td><input type="text" name="txtHoTen" size="40"></td>
+        </tr>
+        <tr>
+            <td>Dia chi</td>
+            <td><input type="text" name="txtDiaChi" size="40"></td>
+        </tr>
+        <tr>
+            <td>Dien thoai</td>
+            <td><input type="text" name="txtDienThoai" size="20"></td>
+        </tr>
+        <tr>
+            <td>Phai</td>
+            <td>
+                <input type="radio" name="gioiTinh" value="Nam"> Nam
+                <input type="radio" name="gioiTinh" value="Nu" checked> Nu
+            </td>
+        </tr>
+        <tr>
+            <td>Nghe nghiep</td>
+            <td>
+                <select name="cboNgheNghiep">
+                    <option>Bac si</option>
+                    <option>Ky su</option>
+                    <option selected>Giao vien</option>
+                    <option>Khac</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">Chon san pham tham gia</td>
+            <td>
+                <select name="lstSanPham" multiple size="4">
+                    <option>Kem danh rang</option>
+                    <option>Bot giat</option>
+                    <option selected>Dau goi dau</option>
+                    <option>Sua tam</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>So nguoi du doan tham gia</td>
+            <td><input type="text" name="txtSoNguoi" size="20"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" value="Dong y" onclick="dangKy()">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label id="thongbao"></label>
+            </td>
+        </tr>
+    </table>
+    </form>
+
+    <script>
+        function dangKy() {
+            document.getElementById("thongbao").innerHTML = "Ban da dang ky thanh cong!!!";
+        }
+    </script>
+
+</body>
+</html>
